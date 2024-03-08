@@ -5,8 +5,11 @@
 This project simulates the way items can be kept on multiple servers in a balanced way.
 
 For storing the items in a balanced manner, I used Consistent Hashing.
+
 Consistent Hashing is a hashing method used so that when rescaling the table only n / m keys will be remaped (n no keys, m no servers);
+
 Servers are placed on a "hash ring". The server resposible for holding an item is the closest one clockwise on the hashring.
+
 For a better balancer, a server has an additional 2 copies of itself on the hash ring.
 
 ## Servers
