@@ -9,13 +9,10 @@ LIST=list
 
 build: server_balancer
 
-server_balancer: main.o $(LOAD).o $(SERVER).o $(HASH).o $(LIST).o
+server_balancer: main.o $(LOAD).o $(HASH).o $(LIST).o
 	$(CC) $^ -o $@
 
 main.o: main.c
-	$(CC) $(CFLAGS) $^ -c
-
-$(SERVER).o: $(SERVER).c $(SERVER).h
 	$(CC) $(CFLAGS) $^ -c
 
 $(LOAD).o: $(LOAD).c $(LOAD).h
